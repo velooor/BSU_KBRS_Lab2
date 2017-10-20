@@ -1,5 +1,6 @@
 package by.bsu.zakharchenya;
 
+import java.lang.System;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -305,7 +306,6 @@ public class AES {
      *
      * @param source
      * @param block_size
-     * @param mode
      * @return
      */
     private byte[][] padBytes(byte[] source, int block_size) {
@@ -393,9 +393,9 @@ public class AES {
 
         byte paddingOctet = (byte) (len & 0xff);
         for (int i = 0; i < len; i++) {
-            //System.out.println(i + off + " = " + in[i + off]);
+            //LService.out.println(i + off + " = " + in[i + off]);
             in[i + off] = paddingOctet;
-            //System.out.println(i + off + " = " + in[i + off]);
+            //LService.out.println(i + off + " = " + in[i + off]);
         }
     }
 
