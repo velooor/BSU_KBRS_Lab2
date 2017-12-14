@@ -28,4 +28,8 @@ public class LService {
         return instance;
     }
 
+    public static void launch(){
+        Server.getInstance().start();
+    }
+
 }

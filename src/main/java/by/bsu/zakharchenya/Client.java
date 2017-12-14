@@ -11,11 +11,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class Client extends Thread {
     static final Logger LOGGER = LogManager.getLogger(Server.class);
+    private int id;
+    private String name;
+
 
     @Override
     public void run(){
         try {
-            LService uber = LService.getInstance();
 
 
             TimeUnit.MILLISECONDS.sleep((long)(50000));
